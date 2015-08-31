@@ -13,7 +13,7 @@ class Home extends Controller
   public function index()
   {
     //redirect()->route('authors');
-gggggggggggggggggggggggggggggggggggggggggggggggg
+
       $currentUser = null;
 
       if (Auth::check())
