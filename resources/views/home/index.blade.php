@@ -7,8 +7,6 @@
 
   <h1>
     Welcome {{ $currentUser->firstname or 'guest'}} , This is your home page
-
-
   </h1>
 
   @if($currentUser)
