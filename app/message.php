@@ -10,5 +10,4 @@ class message extends Model
 
     protected $fillable = ['message','user_id'];
       
-
 }
