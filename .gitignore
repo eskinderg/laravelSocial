@@ -2,3 +2,5 @@
 /node_modules
 Homestead.yaml
 .env
+delete.remote-sync.json
+.remote-sync.json

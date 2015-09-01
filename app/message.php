@@ -9,6 +9,6 @@ class message extends Model
     protected $table = 'messages';
 
     protected $fillable = ['message','user_id'];
-        esk
+      
 
 }
