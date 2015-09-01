@@ -2,3 +2,6 @@
 /node_modules
 Homestead.yaml
 .env
+test.env
+delete.remote-sync.json
+.remote-sync.json
