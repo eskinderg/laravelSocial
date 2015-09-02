@@ -1,5 +1,5 @@
 
-var app = angular.module('todoApp', ['ui.grid','ui.grid.selection'], function($interpolateProvider) {
+var app = angular.module('todoApp', ['ngRoute','ui.grid','ui.grid.selection'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });

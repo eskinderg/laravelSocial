@@ -23,6 +23,14 @@
 
               </li>
 
+              <li>
+                <a href="{{URL::to('/wizard')}}">
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                    Wizard
+                </a>
+
+              </li>
+
                 @if(Auth::check())
 
                 <li>

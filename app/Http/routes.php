@@ -25,6 +25,7 @@ Route::get('author/{id}',array('as'=>'authordetail', 'uses'=>'authors@detailview
 
 Route::get('home',array('middleware' => 'fun' ,'as'=>'home','uses'=>'home@index'));
 
+Route::get('wizard',['as'=>'wizard','uses'=>'wizard@index']);
 /*Resources */
 
 Route::group(['middleware' => 'auth'], function()
