@@ -6,7 +6,7 @@
 
 @section('content')
 
-    {!! HTML::script('scripts/route.js') !!}
+
 
     <h3>This is your Wizard page</h3>
 
@@ -20,4 +20,6 @@
 
     </div>
 
+    {!! HTML::script('scripts/route.js') !!}
+    
 @endsection
