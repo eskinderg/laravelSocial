@@ -1,19 +1,4 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
 
 Route::get('/', ['middleware' => 'fun','as'=>'home','uses' => 'home@index']);
 
@@ -25,7 +10,7 @@ Route::get('author/{id}',array('as'=>'authordetail', 'uses'=>'authors@detailview
 
 Route::get('home',array('middleware' => 'fun' ,'as'=>'home','uses'=>'home@index'));
 
-Route::get('wizard',['as'=>'wizard','uses'=>'wizard@index']);
+
 /*Resources */
 
 Route::group(['middleware' => 'auth'], function()
@@ -35,6 +20,8 @@ Route::group(['middleware' => 'auth'], function()
 
     Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);
     Route::post('profile/{id}',['as'=>'profile.update','uses'=>'profileController@update']);
+
+    Route::get('wizard',['as'=>'wizard','uses'=>'wizard@index']);
 
 });
 

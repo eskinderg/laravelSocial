@@ -11,5 +11,5 @@ class author extends Model
 
     protected $fillable = [];
 
-    protected $hidden = ['id'];
+    //protected $hidden = ['id'];
 }

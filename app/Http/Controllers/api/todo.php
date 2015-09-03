@@ -18,4 +18,11 @@ class todo extends Controller
 
   }
 
+  public function show($id)
+  {
+    $author = author::find($id);
+
+    return $author;
+  }
+
 }

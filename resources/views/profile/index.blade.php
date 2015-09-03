@@ -41,9 +41,9 @@
           </div>
 
           <div class="form-group">
-            <div class="col-md-6">
-            {!! Form::submit('Update',array('class'=>'btn btn-default')) !!}
-          </div>
+            <div class="col-md-6" style="text-align:right;">
+              {!! Form::submit('Update',array('class'=>'btn btn-default')) !!}
+            </div>
           </div>
 
 
