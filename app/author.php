@@ -9,7 +9,7 @@ class author extends Model
     //
     protected $table = 'authors';
 
-    protected $fillable = [];
+    protected $fillable = ['name','email','bio'];
 
     //protected $hidden = ['id'];
 }

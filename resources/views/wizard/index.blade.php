@@ -15,11 +15,12 @@
         <a href="#/Page1">Page1</a> |
         <a href="#/Page2">Page2</a> |
         <a href="#/Page3">Page3</a> |
-        <a href="#/Authors">Authors</a>
+        <a href="#/Authors">Authors</a> |
+        <a href="#/create">New</a>
 
     </div>
 
-<div style="border:1px solid grey;padding:15px;">
+<div style="padding:15px;">
     <div ng-view>
 
     </div>

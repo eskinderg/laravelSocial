@@ -15,7 +15,7 @@ Route::get('home',array('middleware' => 'fun' ,'as'=>'home','uses'=>'home@index'
 
 Route::group(['middleware' => 'auth'], function()
 {
-    Route::resource('api/todo','api\todo',['only'=>['index','show']]);
+    Route::resource('api/todo','api\todo',['only'=>['index','show','update','store','destroy']]);
     Route::resource('api/users','api\users',['only'=>['index','edit']]);
 
     Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);

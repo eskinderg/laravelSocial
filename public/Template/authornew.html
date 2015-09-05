@@ -1,11 +1,8 @@
-<div ng-controller="AuthorEditController">
-
-
+<div ng-controller="CreateAuthorController">
 
     <a href="#/Authors">
         <span style="font-size:40px;color:grey;" class ="glyphicon glyphicon-circle-arrow-left"></span>
     </a>
-
 
 <br><br>
 
@@ -15,7 +12,7 @@
       </label>
 
       <div class="col-md-6">
-        <input id="name" class="form-control" type="text" ng-model="author.name" name="name">
+        <input id="name" class="form-control" type="text" ng-model="author.name"  name="name">
       </div>
 
 </div>
@@ -26,7 +23,7 @@
       </label>
 
       <div class="col-md-6">
-        <input id="email" class="form-control" type="email" ng-model="author.email" name="email">
+        <input id="email" class="form-control" ng-model="author.email" type="email"  name="email">
       </div>
 
 </div>
@@ -38,19 +35,19 @@
       </label>
 
       <div class="col-md-6">
-        <input id="bio" class="form-control" type="text" ng-model="author.bio" name="bio">
+        <input id="bio" class="form-control" ng-model="author.bio" type="text" name="bio">
       </div>
 
 </div>
 
 <div class="form-group">
-      <label class="col-md-4 control-label" for="bio">
+      <label class="col-md-4 control-label" >
         &nbsp;
       </label>
 
       <div class="col-md-6">
         <br>
-        <button class="btn btn-default" ng-click="btnSave(author)">Save</button>
+        <button class="btn btn-default" ng-click="btnNew()">Create</button>
       </div>
 
 </div>

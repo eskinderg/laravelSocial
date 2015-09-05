@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\api;
 
+use View;
+use App\User;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use View;
-use App\User;
+
 
 
 class users extends Controller
