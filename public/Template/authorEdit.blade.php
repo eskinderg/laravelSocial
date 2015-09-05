@@ -6,6 +6,7 @@
         <span style="font-size:40px;color:grey;" class ="glyphicon glyphicon-circle-arrow-left"></span>
     </a>
 
+<h3>Edit Author</h3>
 
 <br><br>
 
