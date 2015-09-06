@@ -25,13 +25,8 @@
 
     </div>
 
-<<<<<<< HEAD
     <div style="clear:both"></div>
 </div>
     {!! HTML::script('scripts/route.js') !!}
 
-=======
-    {!! HTML::script('scripts/route.js') !!}
-    
->>>>>>> Angular_Routing_Implemented
 @endsection
