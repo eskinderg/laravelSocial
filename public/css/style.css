@@ -7,3 +7,14 @@ a
 {
   text-decoration: none;
 }
+
+.table tr{
+  cursor: pointer;
+
+}
+
+.table tr:hover
+{
+  background-color:#EDEDED;
+
+}

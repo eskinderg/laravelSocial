@@ -6,8 +6,8 @@
         <span style="font-size:40px;color:grey;" class ="glyphicon glyphicon-circle-arrow-left"></span>
     </a>
 
-
-<br><br>
+<h3>Edit Author</h3>
+<br>
 
 <div class="form-group">
       <label class="col-md-4 control-label" for="name">
