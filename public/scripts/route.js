@@ -95,7 +95,7 @@ app.controller('AuthorsController', function ($scope,$http,$location) {
 
           $scope.authors = data;
 
-          $scope.gridOptions.data = data;
+          $scope.gridOptions.data = $scope.authors;
 
     });
 
