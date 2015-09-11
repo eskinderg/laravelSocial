@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
 
-    {!! HTML::script('scripts/app.js') !!}
+    {!! HTML::script('scripts/App/App.js') !!}
     {!! HTML::style('css/style.css')!!}
 
     {!! HTML::script('scripts/admin/dashboard.js') !!}
