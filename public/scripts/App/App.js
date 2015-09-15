@@ -29,7 +29,7 @@ app.controller('todoController', function($scope, $http) {
 
 		$scope.loading = true;
 
-		$http.get('api/todo').
+		$http.get('api/authors').
 		success(function(data, status, headers, config) {
 
 			$scope.todos = data;
