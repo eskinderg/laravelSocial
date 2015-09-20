@@ -10,10 +10,7 @@
   </h1>
 
   @if($currentUser)
-
-
-        <?php  $messages = App\User::find($currentUser->id)->messages; ?>
-          {{ $messages }}
-
+          {{ $currentUser->messages }}
   @endif
+
 @endsection

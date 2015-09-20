@@ -142,7 +142,8 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class
+        App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewComposerHeaderServiceProvider::class
 
     ],
 

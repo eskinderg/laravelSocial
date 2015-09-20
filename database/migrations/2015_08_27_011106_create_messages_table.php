@@ -15,9 +15,22 @@ class CreateMessagesTable extends Migration
       Schema::create('messages', function (Blueprint $table) {
           $table->increments('id');
           $table->string('user_id');
-          $table->string('message');
+          $table->string('body');
           $table->timestamps();
       });
+
+      Schema::create('message_user', function (Blueprint $table) {
+          $table->integer('user_id');
+          $table->integer('message_id');
+          $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+          $table->foreign('message_id')->references('id')->on('messages')->onDelete('cascade');
+          $table->string('subject');
+          $table->string('status');
+          $table->timestamps();
+      });
+
+
+
     }
 
     /**
@@ -29,5 +42,6 @@ class CreateMessagesTable extends Migration
     {
         //
         Schema::drop('messages');
+        Schema::drop('message_user');
     }
 }

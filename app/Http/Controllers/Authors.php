@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use View;
-use App\author;
+use App\Author;
 
 class Authors extends Controller
 {
@@ -13,7 +13,7 @@ class Authors extends Controller
 
 	public function index()
 	{
-		$authors=author::all();
+		$authors=Author::all();
 		//$authors=author::where('id','>=','1');
 
 		return View('authors.index',compact('authors'))->with('title','Authors');
@@ -21,10 +21,11 @@ class Authors extends Controller
 		//return View::make('authors.index')->with('title','Authors and Books');
 	}
 
-	public function detailview($id)
+	public function detailview(Author $author)
 	{
+		dd($author->name);
 		return View::make('authors.authordetail')->with('title','Detail')
-		->with('author',author::find($id));
+		->with('author',$author);
 	}
 }
 

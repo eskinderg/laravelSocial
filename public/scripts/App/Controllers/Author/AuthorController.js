@@ -17,7 +17,7 @@ app.controller('AuthorsController', function ($scope,$http,$location) {
 
       //$scope.loading = true;
 
-    $http.get('api/todo').success(function(data, status, headers, config) {
+    $http.get('api/authors').success(function(data, status, headers, config) {
           $scope.authors = data;
           $scope.gridOptions.data = data;
     }).finally(function() {
@@ -30,7 +30,7 @@ app.controller('AuthorsController', function ($scope,$http,$location) {
 
     $scope.btnDelete = function(author,index)
     {
-      $http.delete('api/todo/' + author.id).success(function(data, status, headers, config) {
+      $http.delete('api/authors/' + author.id).success(function(data, status, headers, config) {
            $scope.authors.splice(index, 1);
           //$location.path( "/Authors" );
         });

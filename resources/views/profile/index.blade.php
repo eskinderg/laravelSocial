@@ -3,7 +3,7 @@
 @section('content')
 
     @if (count($errors) > 0)
-        <div class="alert alert-danger">
+        <div class="alert alert-warning">
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -11,7 +11,7 @@
             </ul>
         </div>
     @endif
-
+<div style="margin-top:10px;">
     {!! Form::model($user,['class'=>'form-horizontal','route'=>['profile.update',$user->id]]) !!}
 
 
@@ -58,5 +58,5 @@
 
 
     {!! Form::close() !!}
-
+</div>
 @endsection

@@ -1,13 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
+
+use View;
+use App\User;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class dashboard extends Controller
+
+
+
+class UsersAPIController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +22,9 @@ class dashboard extends Controller
      */
     public function index()
     {
-        return View('admin.index');
+        //
+        return User::all();
+
     }
 
     /**
@@ -59,7 +67,9 @@ class dashboard extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = User::findOrFail($id);
+
+      return View::make('profile.edit',compact('user'));
     }
 
     /**

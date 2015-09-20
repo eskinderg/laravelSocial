@@ -11,7 +11,7 @@ app.controller('CreateAuthorController', function ($scope,$routeParams, $http,$l
     $scope.btnNew = function()
     {
 
-        $http.post('api/todo',$scope.author).success(function(data, status, headers, config) {
+        $http.post('api/authors',$scope.author).success(function(data, status, headers, config) {
           $location.path( "/Authors" );
         });
 

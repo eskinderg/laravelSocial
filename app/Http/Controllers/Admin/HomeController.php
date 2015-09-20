@@ -1,19 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\api;
-
-use View;
-use App\User;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-
-
-
-class users extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,9 +16,7 @@ class users extends Controller
      */
     public function index()
     {
-        //
-        return User::all();
-
+        return View('admin.index');
     }
 
     /**
@@ -67,9 +59,7 @@ class users extends Controller
      */
     public function edit($id)
     {
-      $user = User::findOrFail($id);
-
-      return View::make('profile.edit',compact('user'));
+        //
     }
 
     /**

@@ -4,10 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class message extends Model
+class Message extends Model
 {
     protected $table = 'messages';
 
-    protected $fillable = ['message','user_id'];
-      
+    protected $fillable = ['body','user_id'];
+
+
+    public function users()
+    {
+      //return $this->belongsToMany('App\User');
+    }
+
+
 }

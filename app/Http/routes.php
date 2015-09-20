@@ -4,50 +4,59 @@ Route::get('/', ['middleware' => 'fun','as'=>'home','uses' => 'home@index']);
 
 //Route::get('/',array('as'=>'Home','uses'=>'home@index'));
 
-Route::get('authors', array('middleware'=>'auth','as'=>'authors','uses'=>'authors@index'));
-
-Route::get('author/{id}',array('as'=>'authordetail', 'uses'=>'authors@detailview'));
-
 Route::get('home',array('middleware' => 'fun' ,'as'=>'home','uses'=>'home@index'));
-
 
 /*Resources */
 
 Route::group(['middleware' => 'auth'], function()
 {
-    Route::resource('api/todo','api\todo',['only'=>['index','show','update','store','destroy']]);
-    Route::resource('api/users','api\users',['only'=>['index','edit']]);
+        Route::get('authors', array('as'=>'authors','uses'=>'authors@index'));
 
-    Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);
-    Route::post('profile/{id}',['as'=>'profile.update','uses'=>'profileController@update']);
+        Route::get('authors/{id}',array('as'=>'authordetail','uses'=>'Authors@detailview'),function(App\Author $author){
 
-    Route::get('wizard',['as'=>'wizard','uses'=>'wizard@index']);
+          });
+
+        Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);
+
+        Route::post('profile/{pid}',['as'=>'profile.update','uses'=>'profileController@update']);
+
+        Route::get('wizard',['as'=>'wizard','uses'=>'wizard@index']);
 
 });
 
-/*End Resources*/
+Route::group(['prefix'=>'api','namespace'=>'Api','middleware'=>'auth'],function(){
 
-/*
-Route::get('authors/{id}', function ($id) {
-    return View::make('authors.index')->with('id',$id);
+      // /api/authors   --route
+      Route::resource('authors','AuthorsAPIController',['only'=>['index','show','update','store','destroy']]);
+
+    // /api/users --route
+      Route::resource('users','UsersAPIController',['only'=>['index','edit']]);
+
 });
-*/
-
-// Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
-//
 
 
-// Administrator Routes
-Route::get('admin',['middleware'=>'auth', 'as'=>'admin.dashboard','uses'=>'Admin\dashboard@index']);
+/* Admin Area Routes Group */
+Route::group(['prefix' => 'admin','namespace'=> 'Admin','middleware'=>'auth'], function()
+{
+    Route::get('/',['uses'=>'HomeController@index','as'=>'admin']); //  /admin route
 
-//
+});
+
+/* Authentication namespace */
+Route::group(['prefix'=>'auth','namespace'=>'Auth'],function(){
+
+    // Authentication routes...
+    Route::get('login',['as'=>'auth.login','uses'=>'AuthController@getLogin']);
+    Route::post('login', 'AuthController@postLogin');
+    Route::get('logout',['as'=>'auth.logout','uses'=>'AuthController@getLogout']);
+
+    // Registration routes...
+    Route::get('register', ['as'=>'auth.register','uses'=>'AuthController@getRegister']);
+    Route::post('register', 'AuthController@postRegister');
+
+});
+
+
 
 
 //Route::get('authors',AuthorsController@index));

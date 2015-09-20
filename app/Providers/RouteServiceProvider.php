@@ -27,6 +27,14 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+// route model binding --------------------------------------
+        $router->model('id','App\Author');
+        $router->model('authors','App\Author');
+        $router->model('pid','App\User');
+        /*Route::bind('',function(){
+
+        });*/
+// route model binding end
     }
 
     /**

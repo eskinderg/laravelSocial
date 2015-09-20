@@ -13,17 +13,17 @@ class MessageTableSeeder extends Seeder
     public function run()
     {
       DB::table('messages')->insert([
-          'message' =>'firstMessage Seeded',
+          'body' =>'firstMessage Seeded',
           'user_id' =>'1'
       ]);
 
       DB::table('messages')->insert([
-          'message' =>'secondMessage Seeded',
+          'body' =>'secondMessage Seeded',
           'user_id' =>'1'
       ]);
 
       DB::table('messages')->insert([
-          'message' =>'Hi my name is unknown ok',
+          'body' =>'Hi my name is unknown ok',
           'user_id' =>'2'
       ]);
 

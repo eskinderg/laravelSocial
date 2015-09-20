@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use View;
-use App\author;
+use App\Author;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class todo extends Controller
+class AuthorsAPIController extends Controller
 {
 
   public function index()
@@ -21,26 +21,27 @@ class todo extends Controller
 
   }
 
-  public function show($id)
+  public function show(Author $author)
   {
-    $author = author::find($id);
+    //$author = author::find($id);
 
     return $author;
   }
 
   public function store(Request $request)
   {
-      $author = new author;
-      $author->fill($request->all());
+      $newauthor = new author;
+      $newauthor->fill($request->all());
       //$author->name = "NNNNN";
-      $author->save();
+      $newauthor->save();
   }
 
-  public function update(Request $request,$id)
+  public function update(Request $request,Author $author)
   {
 
-    $author = author::findOrFail($id);
+    //$author = author::findOrFail($id);
     $author->fill($request->all());
+
     //$author->fill($request->all());
     $author->save();
 
@@ -48,9 +49,9 @@ class todo extends Controller
     //return redirect('/wizard#/Authors');
   }
 
-  public function destroy($id)
+  public function destroy(Author $author)
   {
-    $author = author::findOrFail($id);
+    //$author = author::findOrFail($id);
     $author->delete();
   }
 

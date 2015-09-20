@@ -38,7 +38,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function messages()
     {
-      return $this->hasMany('App\message');
+      return $this->hasMany('App\Message');
     }
 
 
