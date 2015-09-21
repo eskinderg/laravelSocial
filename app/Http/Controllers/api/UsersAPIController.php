@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Social\Http\Controllers\Api;
 
 use View;
-use App\User;
+use Social\User;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Social\Http\Requests;
+use Social\Http\Controllers\Controller;
 
 
 

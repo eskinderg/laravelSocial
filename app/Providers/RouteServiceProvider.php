@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Social\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Social\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -28,9 +28,9 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot($router);
 // route model binding --------------------------------------
-        $router->model('id','App\Author');
-        $router->model('authors','App\Author');
-        $router->model('pid','App\User');
+        $router->model('id','Social\Author');
+        $router->model('authors','Social\Author');
+        $router->model('pid','Social\User');
         /*Route::bind('',function(){
 
         });*/

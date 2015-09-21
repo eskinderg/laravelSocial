@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Social\Http\Controllers;
 
 use View;
-use App\Author;
+use Social\Author;
 
 class Authors extends Controller
 {

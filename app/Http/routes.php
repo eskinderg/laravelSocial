@@ -12,7 +12,7 @@ Route::group(['middleware' => 'auth'], function()
 {
         Route::get('authors', array('as'=>'authors','uses'=>'authors@index'));
 
-        Route::get('authors/{id}',array('as'=>'authordetail','uses'=>'Authors@detailview'),function(App\Author $author){
+        Route::get('authors/{id}',array('as'=>'authordetail','uses'=>'Authors@detailview'),function(Social\Author $author){
 
           });
 

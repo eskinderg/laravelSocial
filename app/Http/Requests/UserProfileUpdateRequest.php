@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Social\Http\Requests;
 
-use App\Http\Requests\Request;
+use Social\Http\Requests\Request;
 
 class UserProfileUpdateRequest extends Request
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Social\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\UserProfileUpdateRequest;
+use Social\Http\Requests\UserProfileUpdateRequest;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Social\Http\Requests;
+use Social\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Validator;
 
-use App\User;
+use Social\User;
 
 use Auth;
 

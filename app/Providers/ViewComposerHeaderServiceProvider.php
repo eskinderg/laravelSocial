@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Social\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Message;
+use Social\Message;
 
 class ViewComposerHeaderServiceProvider extends ServiceProvider
 {
@@ -20,7 +20,7 @@ class ViewComposerHeaderServiceProvider extends ServiceProvider
           
           view()->composer('layout.header',function($view)
           {
-              $view->with('messageCount', \App\Message::count());
+              $view->with('messageCount', \Social\Message::count());
 
           });
 
