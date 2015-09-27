@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Laravel</title>
+    <title>Social</title>
     <meta name="viewport" content="width=device-width">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
@@ -22,7 +22,7 @@
 
   </head>
 
-  <body>
+  <body style="padding-top:60px;">
 
     <header> @include('admin.layout.header') </header>
 

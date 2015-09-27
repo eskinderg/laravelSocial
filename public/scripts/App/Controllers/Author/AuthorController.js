@@ -14,7 +14,7 @@ app.controller('AuthorsController', function ($scope,$http,$location) {
 
 
       $scope.loading = {'display': 'block'}; // then button will visible.
-
+      $scope.display = {'display': 'none'}; // then button will visible.
       //$scope.loading = true;
 
     $http.get('api/authors').success(function(data, status, headers, config) {
@@ -23,6 +23,7 @@ app.controller('AuthorsController', function ($scope,$http,$location) {
     }).finally(function() {
           // called no matter success or failure
           $scope.loading = {'display': 'none'}; // then button will hidden.
+          $scope.display = {'display': 'block'}; // then button will visible.
           //$scope.loading = false;
   });
 

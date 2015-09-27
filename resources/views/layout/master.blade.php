@@ -4,14 +4,14 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Laravel</title>
+    <title>Social</title>
     <meta name="viewport" content="width=device-width">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
 
-<script src="//code.jquery.com/jquery.js"></script>
+    <script src="//code.jquery.com/jquery.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
 
 
@@ -30,7 +30,7 @@
 
      @include('layout.header')
 
-    <div class='container'>
+    <div class='container-fluid'>
 
         @include('partials.flash')
 

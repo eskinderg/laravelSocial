@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use Social\Http\Requests;
 use Social\Http\Controllers\Controller;
+use View;
+use Social\Role;
+use Social\User;
+use Auth;
+
 
 class HomeController extends Controller
 {
@@ -16,6 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+      //Auth::user()->roles()->attach(1);
+      //dd(Auth::user()->roles()->first());
+      //return User::all();
         return View('admin.index');
     }
 

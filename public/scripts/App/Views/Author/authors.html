@@ -1,31 +1,31 @@
 <div ng-controller="AuthorsController">
     <h4> <% Title %> </h4>
 
-    <h1 ng-style="loading" style="text-align:center;color:lightgrey;">Loading ....</h1>
+    <img ng-style="loading" src='Images/system/loader.gif' style="display:block;margin:auto;margin-top:5%;">
 
-    <div>
+<div ng-style="display">
 
-    </div>
+        <table class="table">
 
-  <table class="table">
+          <tr ng-repeat="author in authors">
+                  <td ng-model="author.name">
+                    <% author.name %>
+                  </td>
+                  <td ng-model="author.email">
+                    <% author.email %>
+                  </td>
+                  <td>
 
-    <tr ng-repeat="author in authors">
-            <td ng-model="author.name">
-              <% author.name %>
-            </td>
-            <td ng-model="author.email">
-              <% author.email %>
-            </td>
-            <td>
+                    <a href="#/Authors/<% author.id %>">Edit</a>
+                  </td>
+                  <td>
+                    <a style="color:#FF7E00; text-decoration:none;" href="" ng-click="btnDelete(author,$index)" class="glyphicon glyphicon-remove"></a>
+                  </td>
+          </tr>
 
-              <a href="#/Authors/<% author.id %>">Edit</a>
-            </td>
-            <td>
-              <a style="color:#FF7E00; text-decoration:none;" href="" ng-click="btnDelete(author,$index)" class="glyphicon glyphicon-remove"></a>
-            </td>
-    </tr>
+        </table>
 
-  </table>
+  </div>
 
 
 </div>

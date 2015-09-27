@@ -1,61 +1,53 @@
 <div ng-controller="AuthorEditController">
 
+      <img ng-style="loading" src='Images/system/loader.gif' style="display:block;margin:auto;margin-top:5%;">
+
+      <div ng-style="display" id='formWrapper' style="padding:3%; border:1px solid lightgrey;">
+
+        <h4>Edit Author</h4>
+
+        <a href="#/Authors">
+            <span style="font-size:40px;color:grey;" class ="glyphicon glyphicon-circle-arrow-left"></span>
+        </a>
 
 
-    <a href="#/Authors">
-        <span style="font-size:40px;color:grey;" class ="glyphicon glyphicon-circle-arrow-left"></span>
-    </a>
-
-<h3>Edit Author</h3>
-<br>
-
-<div class="form-group">
-      <label class="col-md-4 control-label" for="name">
-        Name:
-      </label>
-
-      <div class="col-md-6">
-        <input id="name" class="form-control" type="text" ng-model="author.name" name="name">
-      </div>
-
-</div>
-<br><br>
-<div class="form-group">
-      <label class="col-md-4 control-label" for="email">
-        E Mail:
-      </label>
-
-      <div class="col-md-6">
-        <input id="email" class="form-control" type="email" ng-model="author.email" name="email">
-      </div>
-
-</div>
-<br><br>
-
-<div class="form-group">
-      <label class="col-md-4 control-label" for="bio">
-        Bio:
-      </label>
-
-      <div class="col-md-6">
-        <input id="bio" class="form-control" type="text" ng-model="author.bio" name="bio">
-      </div>
-
-</div>
-
-<div class="form-group">
-      <label class="col-md-4 control-label" for="bio">
-        &nbsp;
-      </label>
-
-      <div class="col-md-6">
         <br>
-        <button class="btn btn-default" ng-click="btnSave(author)">Save</button>
+
+                  <div class="form-group">
+                        <label for="name">
+                          Name:
+                        </label>
+
+                          <input id="name" class="form-control" type="text" ng-model="author.name" name="name">
+
+                  </div>
+
+                  <div class="form-group">
+                        <label for="email">
+                          E Mail:
+                        </label>
+
+                          <input id="email" class="form-control" type="email" ng-model="author.email" name="email">
+
+                  </div>
+
+
+                  <div class="form-group">
+                        <label  for="bio">
+                          Bio:
+                        </label>
+
+                          <input id="bio" class="form-control" type="text" ng-model="author.bio" name="bio">
+
+                  </div>
+
+                  <div class="form-group">
+
+                          <button class="btn btn-default" ng-click="btnSave(author)">Save</button>
+
+                  </div>
+
       </div>
-
-</div>
-
-
 
 
 

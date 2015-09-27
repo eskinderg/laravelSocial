@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Social\Role;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -41,5 +42,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
       return $this->hasMany('Social\Message');
     }
 
+    public function roles()
+    {
+      return $this->belongsToMany('Social\Role');
+    }
+
+    public function hasRole($roleName)
+    {
+        return $this->roles()->where('name',$roleName)->first();
+    }
 
 }

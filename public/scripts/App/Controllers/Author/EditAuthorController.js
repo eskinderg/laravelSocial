@@ -2,9 +2,19 @@ app.controller('AuthorEditController', function ($scope,$routeParams, $http,$loc
     //$scope.Title = "Page3";
     $scope.id = $routeParams.id;
 
+    $scope.loading = {'display': 'block'}; // then button will visible.
+    $scope.display = {'display': 'none'}; // then button will visible.
+
     $http.get('api/authors/' + $scope.id).success(function(data, status, headers, config) {
           $scope.author = data; //$scope.gridOptions.data = data;  //console.log($scope.author);
-    });
+    }).finally(function() {
+          // called no matter success or failure
+          $scope.loading = {'display': 'none'}; // then button will hidden.
+          $scope.display = {'display': 'block'};
+          //$scope.loading = false;
+  });
+
+
 
     $scope.btnSave = function(author)
     {
