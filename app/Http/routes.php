@@ -12,7 +12,7 @@ Route::group(['middleware' => 'auth'], function()
 {
         Route::get('authors', array('as'=>'authors','uses'=>'authors@index'));
 
-        Route::get('authors/{id}',array('as'=>'authordetail','uses'=>'Authors@detailview'),function(Social\Author $author){
+        Route::get('authors/{id}',array('as'=>'authordetail','uses'=>'Authors@detailview'),function(Social\Models\Author $author){
 
           });
 
@@ -35,7 +35,7 @@ Route::group(['prefix'=>'api','namespace'=>'Api','middleware'=>'auth'],function(
 });
 
 
-/* Admin Area Routes Group Two Middleware of Authenticated and Admin Roles */ 
+/* Admin Area Routes Group Two Middleware of Authenticated and Admin Roles */
 Route::group(['prefix' => 'admin','namespace'=> 'Admin','middleware'=>['auth','admin']], function()
 {
     Route::get('/',['uses'=>'HomeController@index','as'=>'admin']); //  /admin route

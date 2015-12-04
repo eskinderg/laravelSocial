@@ -10,7 +10,7 @@ use Social\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Validator;
 
-use Social\User;
+use Social\Models\User;
 
 use Auth;
 

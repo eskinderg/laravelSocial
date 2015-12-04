@@ -21,6 +21,7 @@ class AdminMiddleware
             return $next($request);
         }
 
+        //return View("auth.login");
         return "You dont have admin role to view the page";
     }
 }

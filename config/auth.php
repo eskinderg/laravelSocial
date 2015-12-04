@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => Social\User::class,
+    'model' => Social\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

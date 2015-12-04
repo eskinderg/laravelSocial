@@ -2,7 +2,7 @@
 
 namespace Social\Http\Controllers\Auth;
 
-use Social\User;
+use Social\Models\User;
 use Validator;
 use Social\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;

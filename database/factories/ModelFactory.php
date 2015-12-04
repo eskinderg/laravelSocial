@@ -11,11 +11,21 @@
 |
 */
 
-$factory->define(Social\User::class, function ($faker) {
+$factory->define(Social\Models\User::class, function ($faker) {
     return [
-        'name' => $faker->name,
+        'firstname' => $faker->firstname,
+        'lastname' => $faker->lastname,
         'email' => $faker->email,
         'password' => str_random(10),
         'remember_token' => str_random(10),
+    ];
+});
+
+
+$factory->define(Social\Models\Author::class, function ($faker) {
+    return [
+        'name' => $faker->name,
+        'bio' => str_random(25),
+        'email' => $faker->email,
     ];
 });

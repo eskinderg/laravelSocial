@@ -37,7 +37,7 @@
                           Bio:
                         </label>
 
-                          <input id="bio" class="form-control" type="text" ng-model="author.bio" name="bio">
+                          <textarea id="bio" class="form-control" ng-model="author.bio" name="bio">
 
                   </div>
 

@@ -27,10 +27,11 @@
   </head>
 
   <body style="padding-top:60px;">
+   <header>
+        @include('layout.header')
+   </header>
 
-     @include('layout.header')
-
-    <div class='container-fluid'>
+    <div class='container'>
 
         @include('partials.flash')
 

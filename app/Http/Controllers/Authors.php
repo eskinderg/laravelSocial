@@ -3,7 +3,7 @@
 namespace Social\Http\Controllers;
 
 use View;
-use Social\Author;
+use Social\Models\Author;
 
 class Authors extends Controller
 {
@@ -16,7 +16,10 @@ class Authors extends Controller
 		$authors=Author::all();
 		//$authors=author::where('id','>=','1');
 
-		return View('authors.index',compact('authors'))->with('title','Authors');
+		$paginatedAuthors = Author::paginate(5);
+		//dd($paginatedAuthors);
+		return View('authors.index',compact('authors'))
+									->with('paginatedAuthors',$paginatedAuthors);
 
 		//return View::make('authors.index')->with('title','Authors and Books');
 	}

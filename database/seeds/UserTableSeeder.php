@@ -38,6 +38,9 @@ class UserTableSeeder extends Seeder
           'created_at'=>date('Y-m-d H:m:s')
       ));
 
+      Social\Models\User::find(1)->roles()->attach(1); //assign eskider with admin role
+
+      factory(Social\Models\User::class,15)->create();
 
     }
 

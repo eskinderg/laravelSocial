@@ -28,9 +28,9 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot($router);
 // route model binding --------------------------------------
-        $router->model('id','Social\Author');
-        $router->model('authors','Social\Author');
-        $router->model('pid','Social\User');
+        $router->model('id','Social\Models\Author');
+        $router->model('authors','Social\Models\Author');
+        $router->model('pid','Social\Models\User');
         /*Route::bind('',function(){
 
         });*/

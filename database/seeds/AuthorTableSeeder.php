@@ -59,5 +59,8 @@ class AuthorTableSeeder extends Seeder
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s')
         ));
+
+        factory(Social\Models\Author::class,30)->create();
+
     }
 }

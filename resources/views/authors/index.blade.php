@@ -11,6 +11,18 @@
     @endforeach
 
 
+@foreach ($paginatedAuthors as $author)
+
+   {{--<li>{{ $author->name }}</li> --}}
+
+@endforeach
+
+<?php //echo $paginatedAuthors->render(); ?>
+
+
+
+
+
 <div ng-controller="todoController">
 
     <button class ="btn btn-default" ng-click="btnload()" >Load Authors</button>

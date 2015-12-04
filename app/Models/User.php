@@ -1,13 +1,13 @@
 <?php
 
-namespace Social;
+namespace Social\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use Social\Role;
+use Social\Models\Role;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -39,12 +39,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function messages()
     {
-      return $this->hasMany('Social\Message');
+      return $this->hasMany('Social\Models\Message');
     }
 
     public function roles()
     {
-      return $this->belongsToMany('Social\Role');
+      return $this->belongsToMany('Social\Models\Role');
     }
 
     public function hasRole($roleName)

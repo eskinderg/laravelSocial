@@ -11,8 +11,9 @@ app.controller('CreateAuthorController', function ($scope,$routeParams, $http,$l
     $scope.btnNew = function()
     {
 
-        $http.post('api/authors',$scope.author).success(function(data, status, headers, config) {
-          $location.path( "/Authors" );
+        $http.post('api/authors',$scope.author)
+              .success(function(data, status, headers, config) {
+                    $location.path( "/Authors" );
         });
 
     }

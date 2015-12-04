@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use Social\Http\Requests;
 use Social\Http\Controllers\Controller;
 use View;
-use Social\Role;
-use Social\User;
+use Social\Models\Role;
+use Social\Models\User;
 use Auth;
 
 

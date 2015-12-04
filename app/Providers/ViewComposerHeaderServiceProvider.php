@@ -3,7 +3,7 @@
 namespace Social\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Social\Message;
+use Social\Models\Message;
 
 class ViewComposerHeaderServiceProvider extends ServiceProvider
 {
@@ -17,10 +17,10 @@ class ViewComposerHeaderServiceProvider extends ServiceProvider
 
 
           //Data shared with sub view goes here
-          
+
           view()->composer('layout.header',function($view)
           {
-              $view->with('messageCount', \Social\Message::count());
+              $view->with('messageCount', \Social\Models\Message::count());
 
           });
 

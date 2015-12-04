@@ -3,7 +3,7 @@
 namespace Social\Http\Controllers\Api;
 
 use View;
-use Social\Author;
+use Social\Models\Author;
 
 use Illuminate\Http\Request;
 

@@ -18,3 +18,8 @@ a
   background-color:#EDEDED;
 
 }
+
+html
+{
+   overflow-y: scroll;
+}
