@@ -36,7 +36,7 @@ Route::group(['prefix'=>'api','namespace'=>'Api','middleware'=>'auth'],function(
 
 
 /* Admin Area Routes Group Two Middleware of Authenticated and Admin Roles */
-Route::group(['prefix' => 'admin','namespace'=> 'Admin','middleware'=>['auth','admin']], function()
+Route::group(['prefix' => 'admin','namespace'=> 'Admin','middleware'=>['auth','role']], function()
 {
     Route::get('/',['uses'=>'HomeController@index','as'=>'admin']); //  /admin route
 
