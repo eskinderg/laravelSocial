@@ -4,10 +4,15 @@ namespace Social\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use View;
 use Auth;
+use \Social\Interfaces\IDocument;
 
 class Home extends Controller
 {
 
+  function __construct(IDocument $doc)
+  {
+    echo $doc->Title();
+  }
 //public $restful = true;
 
   public function index()

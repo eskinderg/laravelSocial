@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+      $this->app->bind('\Social\Interfaces\IDocument', '\Social\Interfaces\DocImplement');
     }
 }
