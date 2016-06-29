@@ -4,3 +4,7 @@ Homestead.yaml
 .env
 delete.remote-sync.json
 .remote-sync.json
+.htaccess
+composer.phar
+error_log
+public/error_log

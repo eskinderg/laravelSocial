@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90b9f956bf366216aae2c8bbb4f751c3",
+    "hash": "267370157707e951ae03486ee3f53c3a",
     "content-hash": "ff3ae80b68f8568159fca86f05e25ba0",
     "packages": [
         {
@@ -517,6 +517,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
+            "abandoned": "laravelcollective/html",
             "time": "2015-01-01 16:31:18"
         },
         {
