@@ -34,6 +34,11 @@ class Home extends Controller
             $currentUser = Auth::user();
         }
 
+    return View::make('home.index')
+    	->with('currentUser',$currentUser)
+    	->with('injected',$this->idocument->Title())
+    	->with('CurrentDate',$this->idocument->CurrentTime())
+      ->with('City',$City);
       //$messages = \Social\User::find($currentUser->id)->messages;
 
 
