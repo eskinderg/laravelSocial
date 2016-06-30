@@ -7,7 +7,7 @@ namespace Social\Interfaces;
 
       public function Title();
 
-      public function CreatedOn();
+      public function CurrentTime();
 
    }
  ?>

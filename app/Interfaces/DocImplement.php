@@ -11,10 +11,11 @@ class DocImplement implements IDocument
 
      public function Title()
      {
-       return "My Title";
+       return "Injected Text";
      }
 
-     public function CreatedOn(){
-       return "Today";
+     public function CurrentTime(){
+       return date("Y/m/d");
      }
 }
+?>
