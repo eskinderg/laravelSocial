@@ -32,7 +32,10 @@ class Home extends Controller
       //$messages = \Social\User::find($currentUser->id)->messages;
 
 
-    return View::make('home.index')->with('currentUser',$currentUser)->with('injected',$this->idocument->Title());
+    return View::make('home.index')
+	->with('currentUser',$currentUser)
+	->with('injected',$this->idocument->Title())
+	->with('CurrentDate',$this->idocument->CurrentTime());
     //return View::make('home.index',array('name'=>'Eskinder'))->with('age','29');
 
   }
