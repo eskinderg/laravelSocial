@@ -5,12 +5,17 @@
 
 @section('content')
 
+ <!-- <h1>{{$injected}}</h1> -->
+
   <h1>
     Welcome {{ $currentUser->firstname or 'guest'}} , This is your home page
   </h1>
 
+<!--	Date Time <h2>{{$CurrentDate}}</h2> -->
+
   @if($currentUser)
           {{ $currentUser->messages }}
   @endif
+  
 
 @endsection
