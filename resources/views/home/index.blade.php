@@ -14,8 +14,9 @@
 <!--	Date Time <h2>{{$CurrentDate}}</h2> -->
 
   @if($currentUser)
-          {{ $currentUser->messages }}
+          {{-- $currentUser->messages --}}
   @endif
   
 
+  <h3>City:&nbsp; {{$City}}</h3>
 @endsection

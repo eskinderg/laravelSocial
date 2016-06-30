@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
       $this->app->bind('\Social\Interfaces\IDocument', '\Social\Interfaces\DocImplement');
+      $this->app->bind('\Social\Interfaces\Services\Weather\IWeather', '\Social\Interfaces\Services\Weather\Weather');
     }
 }
