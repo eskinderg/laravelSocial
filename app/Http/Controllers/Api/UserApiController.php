@@ -11,7 +11,7 @@ use Social\Http\Requests;
 use Social\Http\Controllers\Controller;
 
 
-class UsersAPIController extends Controller
+class UserApiController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -30,7 +30,7 @@ Route::group(['prefix'=>'api','namespace'=>'Api','middleware'=>'auth'],function(
       Route::resource('authors','AuthorsAPIController',['only'=>['index','show','update','store','destroy']]);
 
     // /api/users --route
-      Route::resource('users','UsersAPIController',['only'=>['index','edit']]);
+      Route::resource('users','UserApiController',['only'=>['index','edit']]);
 
 });
 
