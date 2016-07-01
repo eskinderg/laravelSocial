@@ -3,14 +3,12 @@
 namespace Social\Http\Controllers\Api;
 
 use View;
-use Social\Models\User; 
+use Social\Models\User;
 
 use Illuminate\Http\Request;
 
 use Social\Http\Requests;
 use Social\Http\Controllers\Controller;
-
-
 
 
 class UsersAPIController extends Controller
