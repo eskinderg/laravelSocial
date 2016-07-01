@@ -15,7 +15,7 @@ use Social\Models\User;
 use Auth;
 
 
-class profileController extends Controller
+class profile extends Controller
 {
     /**
      * Display a listing of the resource.
