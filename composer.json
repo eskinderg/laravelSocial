@@ -6,9 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
+        "laravel/framework": "5.2.*",
         "laravelcollective/html": "~5.0",
-        "illuminate/html": "5.*",
         "twbs/bootstrap": "^3.3",
         "laracasts/integrated": "^0.15.6"
     },
