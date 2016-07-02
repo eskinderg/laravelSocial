@@ -41,6 +41,5 @@ class Home extends Controller
       ->with('City',$City);
       //$messages = \Social\User::find($currentUser->id)->messages;
 
-
   }
 }
