@@ -22,6 +22,7 @@ class RoleMiddleware
         //return View("auth.login");
         //return "You dont have admin role to view the page";
         // Auth::logout();
-        return redirect('auth/login');
+            return $next($request);
+        // return redirect('auth/login');
     }
 }

@@ -143,7 +143,7 @@ return [
         Social\Providers\AppServiceProvider::class,
         Social\Providers\EventServiceProvider::class,
         Social\Providers\RouteServiceProvider::class,
-        Social\Providers\ViewComposerHeaderServiceProvider::class
+        Social\Providers\ViewComposerServiceProvider::class
 
     ],
 
