@@ -38,8 +38,10 @@ class AuthorsAPIController extends Controller
 
   public function update(Request $request,Author $author)
   {
-
-    //$author = author::findOrFail($id);
+    //var_dump($author->id);
+    //dd($author->name);
+    $author = author::findOrFail($author->id);
+    //dd($request);
     $author->fill($request->all());
 
     //$author->fill($request->all());

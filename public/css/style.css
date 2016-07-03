@@ -16,10 +16,14 @@ a
 .table tr:hover
 {
   background-color:#EDEDED;
-
 }
 
 html
 {
-   overflow-y: scroll;
+   overflow-y: scroll ! important;
+}
+.ngdialog-content
+{
+  padding:1.8em 2em ! important;
+  border-radius: 0px ! important;
 }

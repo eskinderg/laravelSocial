@@ -1,12 +1,27 @@
 
-var app = angular.module('todoApp', ['ngRoute','ui.grid','ui.grid.selection'], function($interpolateProvider) {
+var app = angular.module('todoApp', ['ngRoute','ui.grid','ui.grid.selection','ngDialog'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
 
 
+app.config(['ngDialogProvider', function (ngDialogProvider) {
+    ngDialogProvider.setDefaults({
+        className: 'ngdialog-theme-default',
+        plain: false,
+        showClose: true,
+        closeByDocument: true,
+        closeByEscape: true,
+        appendTo: false,
+        // disableAnimation: true,
+        preCloseCallback: function () {
+            console.log('default pre-close callback');
+        }
+    });
+}]);
 
-app.controller('todoController', function($scope, $http) {
+
+/*app.controller('todoController', function($scope, $http) {
 
 
 	$scope.todos = [];
@@ -97,4 +112,4 @@ app.controller('todoController', function($scope, $http) {
 
 	$scope.init();
 
-});
+});*/

@@ -2,6 +2,11 @@
 
 {{-- @section('title', 'Authors') --}}
 
+@section('scripts')
+  {!! HTML::script('scripts/App/Controllers/Author/AuthorsController.js') !!}
+@endsection
+
+
 @section('content')
 
     @foreach ($authors as $author)
@@ -23,10 +28,7 @@
 
 
 
-<div ng-controller="todoController">
-
-    <button class ="btn btn-default" ng-click="btnload()" >Load Authors</button>
-
+<div ng-controller="AuthorsController">
 
     <br><br>
     <div ui-grid="gridOptions" ui-grid-selection class="grid"></div>
