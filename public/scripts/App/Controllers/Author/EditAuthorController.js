@@ -1,4 +1,4 @@
-app.controller('AuthorEditController', function ($scope,$routeParams, $http,$location) {
+app.controller('AuthorEditController', function ($scope,$routeParams, $http,$location, Service) {
     //$scope.Title = "Page3";
     $scope.id = $routeParams.id;
 
@@ -14,13 +14,16 @@ app.controller('AuthorEditController', function ($scope,$routeParams, $http,$loc
           //$scope.loading = false;
   });
 
-
-
     $scope.btnSave = function(author)
     {
 
+        Service.updateAuthor(author).then(function (result) {
+            $location.path( "/Authors" );
+        });
+/*
         $http.put('api/authors/'+ author.id,author).success(function(data,status,headers,config) {
             $location.path( "/Authors" );
         });
-    }
+*/
+      }
 });

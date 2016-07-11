@@ -4,7 +4,6 @@
 
 @section('content')
 
-
   <a href=" {{ URL::to('/authors') }} ">Back</a>
 
 

@@ -1,0 +1,40 @@
+<div style="margin-top:10px; display:block;">
+    <form class='form-horizontal'>
+        <h4>Edit Author</h4>
+        <div class="form-group">
+
+            <label for="name" class="col-md-4 control-label">Name:</label>
+
+            <div class="col-md-6">
+                <input class="form-control" ng-model="ngDialogData.name" name="name" type="text" id="name">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="email" class="col-md-4 control-label">Email:</label>
+
+            <div class="col-md-6">
+                <input ng-model="ngDialogData.email" class="form-control" name="email" type="text" id="email">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="bio" class="col-md-4 control-label">Bio:</label>
+
+            <div class="col-md-6">
+                 <textarea class="form-control" ng-model="ngDialogData.bio" rows="5" id="bio"></textarea>
+            </div>
+
+        </div>
+
+        <span style="font-size:20px; float:right; cursor:pointer;" ng-click="btnsave(ngDialogData)" class="glyphicon glyphicon-floppy-disk"></span>
+
+        <div style="clear:both;"></div>
+
+    </form>
+
+</div>

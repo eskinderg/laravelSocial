@@ -1,7 +1,12 @@
 @extends('layout.master')
 
-
-
+@section('scripts')
+  {!! HTML::script('scripts/App/Routes.js') !!}
+  {!! HTML::script('scripts/App/Controllers/PagesController.js') !!}
+  {!! HTML::script('scripts/App/Controllers/Author/AuthorsController.js') !!}
+  {!! HTML::script('scripts/App/Controllers/Author/CreateAuthorController.js') !!}
+  {!! HTML::script('scripts/App/Controllers/Author/EditAuthorController.js') !!}
+@endsection
 
 
 @section('content')
@@ -52,7 +57,6 @@
 
                </li>
 
-
          </ul>
     </div>
 
@@ -63,11 +67,5 @@
 
     <div style="clear:both"></div>
 </div>
-
-    {!! HTML::script('scripts/App/Routes.js') !!}
-    {!! HTML::script('scripts/App/Controllers/PagesController.js') !!}
-    {!! HTML::script('scripts/App/Controllers/Author/AuthorController.js') !!}
-    {!! HTML::script('scripts/App/Controllers/Author/CreateAuthorController.js') !!}
-    {!! HTML::script('scripts/App/Controllers/Author/EditAuthorController.js') !!}
 
 @endsection

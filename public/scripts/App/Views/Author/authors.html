@@ -16,16 +16,17 @@
                   </td>
                   <td>
 
-                    <a href="#/Authors/<% author.id %>">Edit</a>
+                    <a href="#/Authors/<% author.id %>" ng-click="btnEdit(author,$index,$event)">
+                      <span class="glyphicon glyphicon-edit"></span>
+                    </a>
                   </td>
                   <td>
-                    <a style="color:#FF7E00; text-decoration:none;" href="" ng-click="btnDelete(author,$index)" class="glyphicon glyphicon-remove"></a>
+                    <a style="color:#FF7E00; text-decoration:none; font-size:16px;" href="" ng-click="btnDelete(author,$index)" class="glyphicon glyphicon-remove-sign"></a>
                   </td>
           </tr>
 
         </table>
 
   </div>
-
 
 </div>
