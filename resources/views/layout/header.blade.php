@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{route('home')}}">Social</a>
+          <a class="navbar-brand" href="{{route('home')}}">Laravel 5.1</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
 

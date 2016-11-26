@@ -25,7 +25,7 @@ class Home extends Controller
   {
     //redirect()->route('authors');
 
-      $City = $this->IWeather->GetCityForecastByZIP(22151);
+      $City = " "; //$this->IWeather->GetCityForecastByZIP(22151); // service not working
 
       $currentUser = null;
 
